@@ -4,11 +4,13 @@
 /**c
  * main - prints a random number and states whether it is positive, negative, or zero.
  * 0-positive_or_negative.c
+ *
  * Return: Always 0.
  * */
 int main(void)
 {
 	int n;
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 0) 
