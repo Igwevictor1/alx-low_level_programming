@@ -1,5 +1,5 @@
 /*
- * file: 0-positive_or_negatice.c
+ * file: 0-positive_or_negative.c
  * Auth: Victor Imeh
  */*
 
