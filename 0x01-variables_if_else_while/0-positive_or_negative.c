@@ -1,8 +1,3 @@
-/*
- * file: 0-positive_or_negative.c
- * Auth: Victor Imeh
- */*
-
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
