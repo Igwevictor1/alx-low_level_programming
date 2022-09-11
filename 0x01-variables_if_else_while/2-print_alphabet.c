@@ -3,7 +3,7 @@
 /**
  * main - Prints all lower case alphabets
  *
- * Description: Prints all alphabets using the the main function
+ * Description: Prints all alphabets using the main function
  * Return: 0
  */
 int main(void)
