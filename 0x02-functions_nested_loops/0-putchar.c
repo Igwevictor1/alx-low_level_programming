@@ -1,20 +1,22 @@
-#include <stdio.h>
+#include <main.h>
 
 /**
- * main - prints alphabets 10 tims in lower case
+ * main - Entry point
  *
- * Description: prints ten times the alphabets in lowercase.
+ * Return: Always 0 (success)
  */
+
 int main(void)
 {
-	int count = 0;
-	char letter;
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 
-	while (count++ <= 9)
-	{
-		for (letter = 'a'; letter <= 'z'; letter++)
-			_putchar(letter);
-		_putchar('\n');
-	}
 	return (0);
 }
