@@ -2,11 +2,11 @@
 /**
  * _abs - function to get the absolute value
  *
- * @n: parameter of the function
+ * @n: parameter of the funtion
  *
  * Return: the absolute value
  */
-int _abs(imt n)
+int _abs(int n)
 {
 	if (n > 0)
 	{
