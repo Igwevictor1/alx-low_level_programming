@@ -4,7 +4,7 @@
  *
  * @c: The character to evaluate
  *
- * Return: Get 1 if c is uppercase.
+ * Return: Get 1 if c is uppercase,
  * Get 0 otherwise
  */
 int _islower(int c)
