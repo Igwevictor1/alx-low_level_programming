@@ -5,7 +5,7 @@
  * @n: parameter
  *
  * Return: natural numbers
- */
+ * */
 void print_to_98(int n)
 {
 	int upper = 98;
@@ -16,7 +16,7 @@ void print_to_98(int n)
 		{
 			if (n != upper)
 			{
-				printf("%d%s", n, ", ");
+				printf("%d%s", ", ");
 			}
 			else
 			{
@@ -31,14 +31,10 @@ void print_to_98(int n)
 		{
 			if (n != upper)
 			{
-				printf("%d%s", n, ", ");
-			}
-			else
-			{
 				printf("%d", n);
 			}
 			n++;
 		}
 	}
-	_putchar(10);
+	putchar(10);
 }
