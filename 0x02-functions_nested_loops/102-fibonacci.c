@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * maim - prints first 50 fibonacci mumbers, starting with 1 and 2,
+ * main - prints first 50 fibonacci mumbers, starting with 1 and 2,
  * separated by a comma followed by a space.
  *
- * Description: write a program that prints the first 50 fibonacci numbers starting with 1 and 2 followed bu a new line.
+ * Description: write a program that prints the first 50 fibonacci numbers 
  *
  * Return: Always 0.
  */
