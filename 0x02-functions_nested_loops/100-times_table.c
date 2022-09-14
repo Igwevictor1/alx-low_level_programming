@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * prints_times_table - printba multiplication table u to param
- * @n: The number to be treated
+ * @n: The value of the times table to be printed
  *
  * Return: Number matrix
  */
