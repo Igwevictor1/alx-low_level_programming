@@ -42,6 +42,7 @@ char *add_strings(char *n1, char *n2, char *r, int r_index)
 
 	else if (tens && r_index < 0)
 		return (0);
+
 	return (r + r_index + 1);
 }
 /**
