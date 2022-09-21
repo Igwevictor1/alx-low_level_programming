@@ -13,15 +13,17 @@ char *leet(char *str)
 
 	while (str[indx1])
 	{
-		for (indx2 = 0; indx2 <= 7; indx2++)
-		{
-			if (str[indx1] == leet[indx2] ||
-					str[indx1] - 32 == leet[indx2])
-				str[indx1] = indx2 + '0';
+			for (indx2 = 0; indx2 <= 7; indx2++)
+			{
+						if (str[indx1] == leet[indx2] ||
+											    str[indx1] - 32 == leet[indx2])
+							str[indx1] = indx2 + '0';
+					}
+	
+			indx1++;
 		}
-
-		indx1++;
-	}
 
 	return (str);
 }
+Footer
+© 2022 GitHub, Inc.}
