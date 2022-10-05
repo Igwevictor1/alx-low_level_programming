@@ -8,7 +8,6 @@
  * @c: char type
  * Return: Return pointer to array created
  */
-
 char *create_array(unsigned int size, char c)
 {
 	char *s;
