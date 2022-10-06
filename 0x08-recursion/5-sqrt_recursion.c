@@ -17,12 +17,12 @@ int sqrt_check(int g, int c)
 }
 
 /**
- * sqrt_recursion - returns the natural sqrt of a number
+ * _sqrt_recursion - returns the natural sqrt of a number
  * @n: integer to find sqrt of
  *
  * Return: natural square root or -1
  */
-int sqrt_recursion(int n)
+int _sqrt_recursion(int n)
 {
 	if (n == 0)
 		return (0);
