@@ -1,1 +1,1 @@
-More pointers, arrays and strings
+My 0x07-pointers_arrays_strings folder
