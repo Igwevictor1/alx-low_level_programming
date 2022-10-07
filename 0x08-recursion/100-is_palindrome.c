@@ -14,7 +14,8 @@ int _strlen_recursion(char *s)
 		return (1 + _strlen_recursion(s + 1));
 }
 
-/** charcheck - resolve palidrome
+/**
+ * charcheck - resolve palidrome
  * @str: pointer to string to be counted
  * @length: int type
  * Return: return palindrime
@@ -32,7 +33,8 @@ int charcheck(char *str, int length)
 		return (0);
 }
 
-/** is_palindrome - check if palindrome
+/**
+ * is_palindrome - check if palindrome is correct
  * @s: pointer to string to be counted
  * Return: return value
  */
