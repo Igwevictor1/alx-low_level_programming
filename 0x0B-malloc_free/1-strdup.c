@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * _strlen - duplicates string
+ * _strlen - return length of a string
  * @str: string to copy
  * Return: char to newly duplicated string
  */
