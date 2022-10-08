@@ -7,7 +7,7 @@
  * @str: string to copy
  * Return: char to newly duplicated string
  */
-char *_strlen(char *str)
+char *_strdup(char *str)
 {
 	int i;
 	int c = 0;
