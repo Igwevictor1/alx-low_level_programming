@@ -3,50 +3,29 @@
 #include <stdio.h>
 
 /**
- * _strlen - return length of a string
- *
- * @s: char type
- * Return: length of string
+ * _strlen - duplicates string
+ * @str: string to copy
+ * Return: char to newly duplicated string
  */
-int _strlen(char *s)
+char *_strlen(char *str)
 {
-	int a;
-
-	for (a = 0; s[a] != '\0'; a++)
-	{
-
-	}
-	return (a);
-}
-
-/**
- * *_strdup - function to return pointer to string
- * @str: pointer to string array
- * Return: pointer to string created
- */
-
-char *_strdup(char *str)
-{
-	char *ptr;
-	int size;
-	int x;
+	int i;
+	int c = 0;
+	char *t;
 
 	if (str == NULL)
-	{
 		return (NULL);
-	}
-	size = _strlen(str) + 1;
-	ptr = malloc(size * sizeof(char));
 
-	x = 0;
-	while (x < size)
-	{
-		if (ptr == NULL)
-		{
-			return (NULL);
-		}
-		ptr[x] = str[x];
-		x++;
-	}
-	return (ptr);
+	while (str[c] != '\0')
+		c++;
+
+	t = malloc(sizeof(char) * c + 1);
+
+	if (t == NULL)
+		return (NULL);
+
+	for (i = 0; i < c; i++)
+		t[i] = str[i];
+
+	return (t);
 }
