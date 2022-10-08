@@ -2,50 +2,38 @@
 #include <stdlib.h>
 
 /**
- * _strlen - length of string
- * @s: string
- * Return: length
+ * argstostr - concatenates all arguments of the program
+ * @ac: argument count
+ * @av: pointer to array of size ac
+ * Return: NULL if ac == 0, or av == null pointer to new string
  */
-int _strlen(char *s)
-{
-	int i = 0;
 
-	while (s[i])
-		i++;
-	return (i);
-}
-
-/**
- * argstostr - concatenates all the arguments of the program
- * @ac: argc
- * @av: argv
- * Return: array of string with \n
- */
 char argstostr(int ac, char **av)
 {
-	int i, j, k = 0, length = 0;
-	char *str;
-
-	if (ac == 0 || av == NULL)
-		return (NULL);
-	/*First we calculate the length of new array + 1 counting \n */
-	for (i = 0; i < ac; i++)
-		length = _strlen(av[i]) + length + 1;
-	/* we add + 1 for \0 */
-	str = malloc(sizeof(char) * (length + 1));
-	if (str == 0)
-		return (NULL);
-	/*Second create the new string*/
-	for (i = 0; i < ac; i++)
-	{
-		for (j = 0; av[i][j]; j++)
-		{
-			*(str + k) = av[i][j];
-			k++;
-		}
-		*(str + k) = '\n';
-		k++;
-	}
-	*(str + k) = '\0';
-	return (str);
+int i, n, k = 0, roe = 0;
+char *str;
+if (ac == 0 || av == NULL)
+return (NULL);
+for (i = 0; i < ac; i++)
+{
+for (n = 0; av[i][n]; n++)
+roe++;
+}
+roe += ac;
+str = malloc(sizeof(char) * roe + 1);
+if (str == NULL)
+return (NULL);
+for (i = 0; i < ac; i++)
+{
+for (n = 0; av[i][n]; n++)
+{
+str[k] = av[i][n];
+k++;
+}
+if (str[k] == '\0')
+{
+str[k++] = '\n';
+}
+}
+return (str);
 }
