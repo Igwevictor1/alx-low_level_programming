@@ -4,9 +4,9 @@
 
 /**
  * create_array - create an array of size with char c
- * @size: unsigned int type
- * @c: char type
- * Return: return pointer to array created
+ * @size: size of array to create
+ * @c: char to initialize with
+ * Return: char value
  */
 char *create_array(unsigned int size, char c)
 {
