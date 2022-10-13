@@ -1,1 +1,1 @@
-My first program
+My first programming language C
