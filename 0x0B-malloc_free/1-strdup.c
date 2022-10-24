@@ -1,39 +1,69 @@
 #include "main.h"
-#include <stdlib.h>
+/**
+ *_strlen - count array
+ *@s: array of elements
+ *Return: 1
+ */
 
-/*
- * _strdup - return a pointer to newly allocated memory
- * @str: a string given by main
- * Return: the pointer or null
+int _strlen(char *s)
+{
+	unsigned int i;
+
+	i = 0;
+	while (s[i] != '\0') /*count character of string*/
+	{
+		i++;
+	}
+
+	return (i);
+}
+
+/**
+ *_strcpy - copy arrays
+ *@src: array of elements
+ *@dest: dest array
+ *Return: dest
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int i = 0;
+
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+
+	return (dest);
+}
+
+/**
+ *_strdup - array for prints a string
+ *@str: array of elements
+ *Return: pointer
  */
 
 char *_strdup(char *str)
 {
-char *ptr;
-unsigned int ceo, i;
+	char *dst;
+	unsigned int size;
 
-/* confirm if str is null*/
-if (str == NULL)
-{
-return (NULL);
-}
-ceo = 0;
-/* while str is not equal to 0*/
-while (str[ceo] != '\0')
-{
-ceo++;
-}
-ptr = malloc(sizeof(char) * (ceo + 1));
-/*if malloc is null*/
-if (ptr == NULL)
-{
-return (NULL);
-}
-/* if malloc is not null start a for loop*/
-for (i = 0; i < ceo; i++)
-{
-ptr[i] = str[i];
-}
-ptr[ceo] = '\0';
-return (ptr);
+	if (str == 0)
+	{
+		return (NULL);
+	}
+
+	size = _strlen(str) + 1;
+
+	dst = (char *) malloc(size * sizeof(char));
+
+	if (dst == 0)
+	{
+		return (NULL);
+	}
+
+	_strcpy(dst, str);
+	return (dst);
 }
