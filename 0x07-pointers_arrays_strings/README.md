@@ -1,1 +1,1 @@
-My 0x07-pointers_arrays_strings folder
+even more pointers and arrays to be solved in coding martial art.. lol
