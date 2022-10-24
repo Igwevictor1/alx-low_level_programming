@@ -1,31 +1,39 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
-/**
- * _strlen - return length of a string
- * @str: string to copy
- * Return: char to newly duplicated string
+/*
+ * _strdup - return a pointer to newly allocated memory
+ * @str: a string given by main
+ * Return: the pointer or null
  */
+
 char *_strdup(char *str)
 {
-	int i;
-	int c = 0;
-	char *t;
+char *ptr;
+unsigned int ceo, i;
 
-	if (str == NULL)
-		return (NULL);
-
-	while (str[c] != '\0')
-		c++;
-
-	t = malloc(sizeof(char) * c + 1);
-
-	if (t == NULL)
-		return (NULL);
-
-	for (i = 0; i < c; i++)
-		t[i] = str[i];
-
-	return (t);
+/* confirm if str is null*/
+if (str == NULL)
+{
+return (NULL);
+}
+ceo = 0;
+/* while str is not equal to 0*/
+while (str[ceo] != '\0')
+{
+ceo++;
+}
+ptr = malloc(sizeof(char) * (ceo + 1));
+/*if malloc is null*/
+if (ptr == NULL)
+{
+return (NULL);
+}
+/* if malloc is not null start a for loop*/
+for (i = 0; i < ceo; i++)
+{
+ptr[i] = str[i];
+}
+ptr[ceo] = '\0';
+return (ptr);
 }

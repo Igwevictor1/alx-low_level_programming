@@ -3,28 +3,22 @@
 #include <stdlib.h>
 
 /**
- * *_calloc - function to allocate memory
- * @nmemb: unsingned int type
- * @size: unsigned int type
- * Return: return pointer to array
- */
+* _calloc - allocated memory for nmeb element of size bytes
+  * @nmemb: number of element in the array
+  * @size: bytes for each position in array
+  * Return: pointer void
+    */
+
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *ptr;
-	unsigned int count;
-
-	if (nmemb == 0 || size == 0)
-		return (NULL);
-	ptr = malloc(nmemb * size);
-	if (ptr == NULL)
-	{
-		return (NULL);
-	}
-	count = 0;
-	while (count < nmemb * size)
-	{
-		ptr[count] = 0;
-		count++;
-	}
-	return (ptr);
+char *p;
+unsigned int i;
+if (nmemb == 0 || size == 0)
+return (NULL);
+p = malloc(nmemb * size);
+if (p == NULL)
+return (NULL);
+for (i = 0; i < nmemb * size; i++)
+p[i] = 0;
+return (p);
 }

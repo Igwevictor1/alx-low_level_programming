@@ -1,1 +1,1 @@
-My static library folder
+Creating Static Libraries during ALX SE program

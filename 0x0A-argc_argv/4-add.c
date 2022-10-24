@@ -1,46 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#define UNUSED(x)(void)(x)
+#include <string.h>
+
 /**
- * main - adds two numbers
- * @argc: int
- * @argv: array of string
- * Return: sum of all digits
- */
+* main - add
+* @argc: int
+* @argv: string
+ * Return: int
+*/
+
 int main(int argc, char *argv[])
 {
-	int i;
-	int j;
-	int c;
-	int sum;
-	char *s;
-
-	sum = 0;
-	c = 0;
-
-	i = 1;
-	while (1 < argc)
-	{
-		s = argv[i];
-		j = 0;
-		while (s[j] != '\0')
-		{
-			if (s[j] < '0' || s[j] > '9')
-			{
-				printf("Error\n");
-				return (1);
-			}
-			j++;
-		}
-		i++;
-	}
-
-	for (i = 1; i < argc; i++)
-	{
-		c = atoi(argv[i]);
-		sum = sum + c;
-	}
-	printf("%d\n", sum);
-	return (0);
+int night = 0, i, j;
+for (i = 1; i < argc; i++)
+{
+for (j = 0; argv[i][j]; j++)
+{
+if (isdigit(argv[i][j]) == 0)
+{
+printf("Error\n");
+return (1);
+}
+}
+}
+for (i = 1; i < argc; i++)
+{
+night += atoi(argv[i]);
+}
+printf("%d\n", night);
+return (0);
 }
